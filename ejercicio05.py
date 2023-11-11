@@ -19,10 +19,9 @@ while True:
 print(hiztegia)
 
 esaldia = input("dime una frase en castellano: ")
-esaldia = esaldia.split()
-for u in esaldia:
-    if u in hiztegia:
-       u = hiztegia.keys(u)
-print(esaldia)
+esaldizatiak = esaldia.split()
+hitzak_itzuliak = [hiztegia.get(hitza, hitza) for hitza in esaldizatiak]
 
-   
+itzulketa =" ".join(hitzak_itzuliak)
+
+print("la frase traducida seria: ",itzulketa)
